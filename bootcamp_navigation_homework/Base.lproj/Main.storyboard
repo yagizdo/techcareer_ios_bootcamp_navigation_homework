@@ -270,6 +270,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Go to Home">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToHomeButton:" destination="CG7-m4-D6G" eventType="touchUpInside" id="OW0-5d-ciF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yrd-33-6OW"/>
