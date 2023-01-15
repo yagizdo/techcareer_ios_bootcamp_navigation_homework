@@ -1,24 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I8a-KD-xzI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Home" customModule="bootcamp_navigation_homework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GV9-qD-giB">
+                                <rect key="frame" x="173.5" y="124" width="67" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="h6q-8F-sDe">
+                                <rect key="frame" x="47" y="348" width="320" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1J-D7-GiP">
+                                        <rect key="frame" x="60" y="0.0" width="200" height="85"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Ee7-0N-v9P"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Go to A">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goToScreenA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aOc-fw-5T5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJk-vG-92H">
+                                        <rect key="frame" x="60" y="115" width="200" height="85"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="ZIS-g1-pQX"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Go to X">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goToScreenx:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FGV-M0-WzQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Bye-CL-3gH"/>
+                                    <constraint firstItem="Z1J-D7-GiP" firstAttribute="centerX" secondItem="h6q-8F-sDe" secondAttribute="centerX" id="pXh-eF-Ea0"/>
+                                    <constraint firstItem="JJk-vG-92H" firstAttribute="centerX" secondItem="h6q-8F-sDe" secondAttribute="centerX" id="qKn-cD-zrJ"/>
+                                    <constraint firstAttribute="height" constant="200" id="tbm-3E-eFo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="h6q-8F-sDe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ecp-g0-QbL"/>
+                            <constraint firstItem="GV9-qD-giB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="bGH-7h-NTG"/>
+                            <constraint firstItem="GV9-qD-giB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t4Y-ra-wDP"/>
+                            <constraint firstItem="h6q-8F-sDe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tcc-RQ-049"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YC7-Ww-c1T"/>
+                    <connections>
+                        <segue destination="8ZB-Dm-2j4" kind="show" identifier="goToScreenA" id="UyF-9h-x4E"/>
+                        <segue destination="Qza-M4-XmT" kind="show" identifier="goToScreenX" id="aWO-JQ-NYX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="717" y="-30"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="T49-a4-TXV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I8a-KD-xzI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sbp-AS-EW6">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lZv-Rv-Rsn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1d9-v1-oth" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135.1145038167939" y="-30.281690140845072"/>
+        </scene>
+        <!--ScreenA-->
+        <scene sceneID="GRL-Eh-ulC">
+            <objects>
+                <viewController id="8ZB-Dm-2j4" customClass="ScreenA" customModule="bootcamp_navigation_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Clv-bn-2mr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psG-TI-nmy">
+                                <rect key="frame" x="156.5" y="156" width="101" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tww-EP-YWG">
+                                <rect key="frame" x="57" y="398" width="300" height="100"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="TkJ-Ns-9Th"/>
+                                    <constraint firstAttribute="height" constant="100" id="vIL-oA-ryo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go to B">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1Wd-Gm-4gp"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="psG-TI-nmy" firstAttribute="centerX" secondItem="Clv-bn-2mr" secondAttribute="centerX" id="Fcj-TS-lYh"/>
+                            <constraint firstItem="tww-EP-YWG" firstAttribute="centerY" secondItem="Clv-bn-2mr" secondAttribute="centerY" id="GRj-Kh-ODW"/>
+                            <constraint firstItem="tww-EP-YWG" firstAttribute="centerX" secondItem="Clv-bn-2mr" secondAttribute="centerX" id="Ofq-ba-mh3"/>
+                            <constraint firstItem="psG-TI-nmy" firstAttribute="top" secondItem="1Wd-Gm-4gp" secondAttribute="top" constant="64" id="W1U-Rz-bq7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uCq-bi-rsR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DKY-mB-Wpq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1465" y="-30"/>
+        </scene>
+        <!--ScreenX-->
+        <scene sceneID="FLp-oh-9Qo">
+            <objects>
+                <viewController id="Qza-M4-XmT" customClass="ScreenX" customModule="bootcamp_navigation_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1La-Vu-CpF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mx9-0G-6j5">
+                                <rect key="frame" x="156.5" y="156" width="101" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMe-gh-tIj">
+                                <rect key="frame" x="57" y="398" width="300" height="100"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9Lj-4q-pCf"/>
+                                    <constraint firstAttribute="width" constant="300" id="XwJ-XK-8UD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go to Y">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="alK-Hx-WRa"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="cMe-gh-tIj" firstAttribute="centerY" secondItem="1La-Vu-CpF" secondAttribute="centerY" id="2pu-Mi-buD"/>
+                            <constraint firstItem="cMe-gh-tIj" firstAttribute="centerX" secondItem="1La-Vu-CpF" secondAttribute="centerX" id="Gxg-PC-TPk"/>
+                            <constraint firstItem="mx9-0G-6j5" firstAttribute="centerX" secondItem="1La-Vu-CpF" secondAttribute="centerX" id="Kdc-Co-ylD"/>
+                            <constraint firstItem="mx9-0G-6j5" firstAttribute="top" secondItem="alK-Hx-WRa" secondAttribute="top" constant="64" id="Zng-qa-61A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iWT-Bd-EF6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifI-uq-VKI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1464" y="619"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
