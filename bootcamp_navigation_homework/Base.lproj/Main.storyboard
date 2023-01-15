@@ -108,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psG-TI-nmy">
-                                <rect key="frame" x="156.5" y="156" width="101" height="29"/>
+                                <rect key="frame" x="156.5" y="124" width="101" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -124,6 +124,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Go to B">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToScreenB:" destination="8ZB-Dm-2j4" eventType="touchUpInside" id="mXR-64-je3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Wd-Gm-4gp"/>
@@ -132,10 +135,13 @@
                             <constraint firstItem="psG-TI-nmy" firstAttribute="centerX" secondItem="Clv-bn-2mr" secondAttribute="centerX" id="Fcj-TS-lYh"/>
                             <constraint firstItem="tww-EP-YWG" firstAttribute="centerY" secondItem="Clv-bn-2mr" secondAttribute="centerY" id="GRj-Kh-ODW"/>
                             <constraint firstItem="tww-EP-YWG" firstAttribute="centerX" secondItem="Clv-bn-2mr" secondAttribute="centerX" id="Ofq-ba-mh3"/>
-                            <constraint firstItem="psG-TI-nmy" firstAttribute="top" secondItem="1Wd-Gm-4gp" secondAttribute="top" constant="64" id="W1U-Rz-bq7"/>
+                            <constraint firstItem="psG-TI-nmy" firstAttribute="top" secondItem="1Wd-Gm-4gp" secondAttribute="top" constant="32" id="W1U-Rz-bq7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uCq-bi-rsR"/>
+                    <connections>
+                        <segue destination="JQm-mW-J0q" kind="show" identifier="goToScreenB" id="ixM-nL-7JZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKY-mB-Wpq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -166,6 +172,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Go to Y">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToY:" destination="Qza-M4-XmT" eventType="touchUpInside" id="80A-3A-Phx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="alK-Hx-WRa"/>
@@ -178,13 +187,120 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iWT-Bd-EF6"/>
+                    <connections>
+                        <segue destination="CG7-m4-D6G" kind="show" identifier="screenXToY" id="jgX-CT-cxz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifI-uq-VKI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1464" y="619"/>
         </scene>
+        <!--ScreenB-->
+        <scene sceneID="PEE-3j-kzl">
+            <objects>
+                <viewController id="JQm-mW-J0q" customClass="ScreenB" customModule="bootcamp_navigation_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nuE-xO-fbZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0b-nI-n0r">
+                                <rect key="frame" x="157.5" y="124" width="99.5" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYb-wh-kJZ">
+                                <rect key="frame" x="57" y="398" width="300" height="100"/>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Owc-Gj-7Cy"/>
+                                    <constraint firstAttribute="width" constant="300" id="ghr-Mz-CV3"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go to Y">
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="screenBToScreenY:" destination="JQm-mW-J0q" eventType="touchUpInside" id="xVz-vx-45G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d12-ic-53r"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OYb-wh-kJZ" firstAttribute="centerY" secondItem="nuE-xO-fbZ" secondAttribute="centerY" id="1CZ-uy-ktF"/>
+                            <constraint firstItem="R0b-nI-n0r" firstAttribute="centerX" secondItem="nuE-xO-fbZ" secondAttribute="centerX" id="dYi-vT-qJJ"/>
+                            <constraint firstItem="OYb-wh-kJZ" firstAttribute="centerX" secondItem="nuE-xO-fbZ" secondAttribute="centerX" id="mt1-7E-DXk"/>
+                            <constraint firstItem="R0b-nI-n0r" firstAttribute="top" secondItem="d12-ic-53r" secondAttribute="top" constant="32" id="nCR-3F-ADM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pHY-9G-noO"/>
+                    <connections>
+                        <segue destination="CG7-m4-D6G" kind="show" identifier="screenBToY" id="ppK-wK-yRw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWA-RE-r6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2199" y="-31"/>
+        </scene>
+        <!--ScreenY-->
+        <scene sceneID="Qda-4u-ceS">
+            <objects>
+                <viewController id="CG7-m4-D6G" customClass="ScreenY" customModule="bootcamp_navigation_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jgK-CY-UK6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7c-YV-EMD">
+                                <rect key="frame" x="156.5" y="124" width="101" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHR-KT-rQV">
+                                <rect key="frame" x="57" y="398" width="300" height="100"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Xau-gF-Rgk"/>
+                                    <constraint firstAttribute="width" constant="300" id="heH-bN-ZIW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go to Home">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yrd-33-6OW"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="GHR-KT-rQV" firstAttribute="centerY" secondItem="jgK-CY-UK6" secondAttribute="centerY" id="Mim-er-6YI"/>
+                            <constraint firstItem="Q7c-YV-EMD" firstAttribute="top" secondItem="Yrd-33-6OW" secondAttribute="top" constant="32" id="NUI-uy-awu"/>
+                            <constraint firstItem="GHR-KT-rQV" firstAttribute="centerX" secondItem="jgK-CY-UK6" secondAttribute="centerX" id="Rns-dg-9Qs"/>
+                            <constraint firstItem="Q7c-YV-EMD" firstAttribute="centerX" secondItem="jgK-CY-UK6" secondAttribute="centerX" id="V3J-XL-3c8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="12J-7f-ee3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zbs-R9-UVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2199" y="619"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ppK-wK-yRw"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
